@@ -6,24 +6,79 @@ html {
   background-size: cover;
 }
 
+body { 
+  background-color: transparent;
+}
+
 .waiting-board{
-  margin: 10vw;
+  margin: 10vh 10vw 0 10vw;
   background: transparent;
   color: white;
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: monospace; 
   font-weight: bold;
 }
 
 .up{
   transition: 0.9s;
-  transform:none;
   opacity: 0.99;
-
 }
 
 .down{
   transition: 0.7s;
   opacity: 0;
+}
+
+.character-section{
+  position: absolute;
+
+  transition: 0.9s;
+}
+
+.character-left{
+  margin-left: 7vw;
+  margin-top: 50vh;
+  z-index: 1;
+  scale: 1.2;
+}
+
+.character-center{
+  margin-top: 40vh; 
+  margin-left: 47vw;
+  z-index: 3;
+}
+
+.character-right{
+  margin-top: 20vw; 
+  margin-left: 55vw;
+  z-index: 2;
+  scale: 0.8;
+}
+
+@media (width <= 1200px) {
+  .character-left{
+    margin-left: -25vw;
+  }
+}
+
+@media (width >= 1600px) {
+  .character-right{
+    margin-top: 15vw; 
+    margin-left: 60vw;
+  }
+}
+
+ul {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 25vh 5vw;
+  position: absolute;
+  color: white;
+  z-index: 4;
+}
+
+li {
+  list-style: none;
 }
