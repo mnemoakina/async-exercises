@@ -69,21 +69,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 6 - Actualizar constantemente el scoreboard
 // de la pagina utilizando polling.
-
-function addCharacterHandlers() {
-  const characterElements = [
-    ...document.getElementsByClassName("character-section"),
-  ];
-  characterElements.forEach((e) => {
-    e.addEventListener("click", (event) => onClickCharacter(event));
-  });
-}
-
-function onClickCharacter(event) {
-  const clickedCharacterName = event.target.id;
-  const clickedCharacterSound = charactersSoundMap.find(
-    (e) => e.name === clickedCharacterName
-  ).file;
-  const audio = new Audio(clickedCharacterSound);
-  audio.play();
-}
