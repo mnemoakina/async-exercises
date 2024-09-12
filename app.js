@@ -52,14 +52,40 @@ document.addEventListener("DOMContentLoaded", function () {
 // usuario a:
 // https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
+/* function rickRollingUser(){
+  setTimeout(function () {
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  }, 30000);
+} */
+
 // 1 -  Cambiar el titulo de la pagina por cada un segundo.
 // "80' game 🎮 ", "insert 🪙 "  y "🥔 You won!"
 
+/* function changeTitle() {
+  const titles = ["80' game 🎮", "insert 🪙", "🥔 You won!"];
+  let index = 0;
+ 
+  setInterval(() => {
+    document.title = titles[index];
+    index = (index + 1) % titles.length;
+  }, 1000);  
+} */
+
 // 2 - annoyingMessage() hacer una funcion que
 // cada 1 minuto aparezca un alert con el mensaje  "Get a Premium Account 🤩"
+/* function annoyingMessage(){
+  setInterval(()=>{
+  window.alert("Get a Premium Account 🤩")  
+  },60000);
+} */
 
 // 4 - Hacer intermitente el mensaje de "Please, insert coin 🪙..."
 // tip: utilizar las clases de css fadeIn fadeOut
+/* const msgCoin = document.getElementById("msgCoin");
+setInterval(()=>{
+  msgCoin.classList.toggle("fadeIn");
+  msgCoin.classList.toggle("fadeOut");
+},1000); */
 
 // 5 - Implementar la funcion fetchScores()
 // traer los datos de la tabla de posiciones
@@ -67,5 +93,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // server o de alguna fake api como mocki.io.
 // se provee de un db.json de ejemplo
 
+/* const URL = "http://localhost:3000/score";
+
+async function fetchData(){
+  try {
+    const res = await fetch(URL, {method:"GET"});
+    const data = await res.json();
+    console.log(data);    
+  } catch (error) {
+    console.log(error);    
+  } finally { 
+    console.log("Finally contenido");
+  }  
+}
+fetchData();  */
+
 // 6 - Actualizar constantemente el scoreboard
 // de la pagina utilizando polling.
+
+/* async function fetchData(){
+  try {
+    const res = await fetch(URL, {method:"GET"});
+    const data = await res.json();
+    console.log(data);    
+  } catch (error) {
+    console.log(error);    
+  } finally { 
+    console.log("Finally contenido");
+  }
+}
+setInterval(fetchData,1000) */
+

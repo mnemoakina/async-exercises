@@ -21,6 +21,8 @@ body {
   font-weight: bold;
 }
 
+
+
 .up {
   transition: 0.9s;
   opacity: 0.99;
@@ -56,6 +58,18 @@ body {
   z-index: 2;
   scale: 0.8;
 }
+
+
+
+.fadeIn {
+  display: block;
+}
+ 
+.fadeOut {
+  display: none;
+}
+
+
 
 .character-left:hover {
   filter: drop-shadow(20px 20px 20px rgb(31 81 255 / 1.3));
