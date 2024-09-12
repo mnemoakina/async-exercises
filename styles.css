@@ -4,10 +4,12 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;  
+  
 }
 
 body {
+  box-sizing: border-box;
   background-color: transparent;
 }
 
@@ -59,7 +61,38 @@ body {
   scale: 0.8;
 }
 
+.scoreCont{
+  width: 70%;
+  height: 50%;
+  margin: 0 auto;
+  padding-left: 4%;
 
+  z-index: 4; 
+  color: white;
+  text-shadow: 3px 3px #5b3e77;
+  background-color: rgba(250, 235, 215, 50%);
+  position: absolute;
+  margin: 14vh 14vw 14vh 14vw;
+  font-size: 3rem;
+  font-family: monospace;
+  font-weight: bold;  
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreList{
+  display: flex;
+}
+
+.scoreRecord{  
+  display:flex;
+  flex-direction: column;
+  gap: 8%;
+  padding-left: 0;
+}
+.scoreRecordItem{
+
+}
 
 .fadeIn {
   display: block;
@@ -95,13 +128,8 @@ body {
 }
 
 ul {
-  font-family: monospace;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 25vh 5vw;
-  position: absolute;
-  color: white;
-  z-index: 4;
+  list-style: none;
+  display: block;
 }
 
 li {

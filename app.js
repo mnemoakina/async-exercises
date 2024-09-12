@@ -93,20 +93,39 @@ setInterval(()=>{
 // server o de alguna fake api como mocki.io.
 // se provee de un db.json de ejemplo
 
-/* const URL = "http://localhost:3000/score";
+const URL = "http://localhost:8000/scores";
+
+function taskList(data){
+return `
+<div></div>
+  <ul class="scoreRecord">    
+    ${data.map (e => `<li class="scoreRecordItem">${e.score} ${e.name} ${e.character}</li>`).join('\n')}    
+  </ul>
+  <div></div>
+`
+
+}
+
+function showScore(score){
+  const scorelist = document.querySelector(".scoreList");
+  scorelist.innerHTML = score;
+}
 
 async function fetchData(){
   try {
     const res = await fetch(URL, {method:"GET"});
     const data = await res.json();
-    console.log(data);    
+    //console.log(data);
+    const score = await taskList(data); 
+    await showScore(score);    
   } catch (error) {
     console.log(error);    
   } finally { 
     console.log("Finally contenido");
   }  
 }
-fetchData();  */
+fetchData();  
+
 
 // 6 - Actualizar constantemente el scoreboard
 // de la pagina utilizando polling.
